@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizzaria Dorinho | Monte</title>
+        <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon" />
+
+        <!-- Inclua os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <link rel="stylesheet" href="../../style/miniCalzone.css" />
+        <script defer src="../../Scrypt/miniCalzone.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="../../img/logo.png" alt="Logo" />
+        </header>
+        <article>
+            <div class="banner">
+                <img src="../../img/bannerCalzone.png" alt="banner de comida" />
+            </div>
+            <div class="title">
+                <span>Selecione um sabor para o seu calzone:</span>
+            </div>
+
+            <div class="subTitlle">
+                <h4>Escolha o sabor do seu calzone doce:</h4>
+            </div>
+
+            <!-- Produto 1 - Beijinho -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Beijinho">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Beijinho"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Beijinho <br />(chocolate branco e coco ralado)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Branco com Abacaxi -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Branco com Abacaxi">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Branco com Abacaxi"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Branco com Abacaxi <br />(chocolate branco, abacaxi e canela)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Branco com Amendoim -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Branco com Amendoim">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Branco com Amendoim"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Branco com Amendoim <br />(chocolate branco e amendoim)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Branco com Banana -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Branco com Banana">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Branco com Banana"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Branco com Banana <br />(chocolate branco, banana e canela)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Branco com Confete -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Branco com Confete">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Branco com Confete"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Branco com Confete <br />(chocolate branco e confete)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 6 - Branco com Morango -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Branco com Morango">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Branco com Morango"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Branco com Morango <br />(chocolate branco e Morango)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 7 - Brigadeiro -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Brigadeiro">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Brigadeiro"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Brigadeiro <br />(chocolate preto e granulado)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 8 - Chocolate Branco -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Chocolate Branco">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Chocolate Branco"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Chocolate Branco <br />(chocolate branco)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 9 - Chocolate Preto -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Chocolate Preto">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Chocolate Preto"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Chocolate Preto <br />(chocolate Preto)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 10 - Mesclado -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Mesclado">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Mesclado"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Mesclado <br />(chocolate Preto e chocolate branco)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 11 - Prestígio -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Prestígio">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Prestígio"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Prestígio <br />(chocolate preto e coco ralado)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 12 - Preto com Abacaxi -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Preto com Abacaxi">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Preto com Abacaxi"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Preto com Abacaxi <br />(chocolate preto, abacaxi, canela)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 13 - Preto com Amendoim -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Preto com Amendoim">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Preto com Amendoim"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Preto com Amendoim <br />(chocolate preto e amendoim)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 14 - Preto com Banana -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Preto com Banana">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Preto com Banana"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Preto com Banana <br />(chocolate preto, banana e canela)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 15 - Preto com Confete -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Preto com Confete">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Preto com Confete"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Preto com Confete <br />(chocolate preto e confete)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 16 - Preto com Morango -->
+            <main class="product" data-index="Mini Calzone 1 sabor: Preto com Morango">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Preto com Morango"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Preto com Morango <br />(chocolate preto e Morango)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <hr style="margin: 30px" />
+
+            <!-- Mais produtos podem ser adicionados seguindo a mesma estrutura -->
+
+            <div class="botaoFinal">
+                <a href="../confirmar.html">
+                    <button type="button">Continuar Pedido</button>
+                </a>
+            </div>
+        </article>
+        <footer>
+            <span>Valor Final:</span>
+            <span class="valor">
+                <span class="resultadoLabel">R$</span>
+                <p class="resultadoFinal">0.00</p>
+            </span>
+        </footer>
+    </body>
+</html>

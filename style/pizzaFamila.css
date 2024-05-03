@@ -1,0 +1,262 @@
+@import url(./index.css);
+
+body {
+    margin: 0;
+    padding-bottom: 50px; /* Altura do footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.subTitlle {
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f0f8ff;
+    padding: 10px;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner > img {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.975rem;
+    text-decoration: underline;
+}
+
+.product {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.imgCarne {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.product > img {
+    width: 10%;
+    padding: 0.25rem;
+}
+
+.product > span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.textUnidade {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+body > article > main:nth-child(3) > span > p:nth-child(3),
+body > article > main:nth-child(4) > span > p:nth-child(2),
+body > article > main:nth-child(5) > span > p:nth-child(2),
+body > article > main:nth-child(6) > span > p:nth-child(2),
+body > article > main:nth-child(7) > span > p:nth-child(2),
+body > article > main:nth-child(8) > span > p:nth-child(2),
+body > article > main:nth-child(9) > span > p:nth-child(2),
+body > article > main:nth-child(10) > span > p:nth-child(2),
+body > article > main:nth-child(11) > span > p:nth-child(3),
+body > article > main:nth-child(12) > span > p:nth-child(2),
+body > article > main:nth-child(13) > span > p:nth-child(2),
+body
+    > article
+    > main:nth-child(14)
+    > span
+    > p:nth-child(2)
+    body
+    > article
+    > main:nth-child(3)
+    > span
+    > p:nth-child(2) {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#unidade {
+    margin-top: 0;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container img {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    margin: 0 5px; /* Adapte a margem conforme necessário */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-container img:hover {
+    transform: scale(1.1); /* Efeito de escala no hover, se desejar */
+}
+
+body > article > main > img:nth-child(3) {
+    width: 40px;
+    align-items: end;
+}
+
+.botaoFinal {
+    text-align: center;
+    align-items: center;
+}
+
+body > article > div.botaoFinal > a > button {
+    font-size: 15px;
+    margin-top: 100px;
+    max-width: 80%;
+    width: 400px;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    margin-bottom: 100px;
+}
+
+body > article > div.botaoFinal > a > button:hover {
+    background-color: #cc171c;
+    color: #fff;
+}
+
+footer {
+    border-top: solid 1px #33333391;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Altura do footer */
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center;
+    padding: 0 20px; /* Espaçamento interno */
+}
+
+/* Estilos para o resultado */
+.valor {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Margem entre R$ e o valor */
+}
+
+/* Estilos para o texto "R$" */
+.resultadoLabel {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+body > footer > span:nth-child(1) {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .banner > img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    span {
+        font-size: 1.5rem;
+    }
+
+    .product {
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .product > img {
+        width: 30%;
+        margin: 0.5rem;
+    }
+
+    img.btnAdicionar,
+    img.btnRetirar {
+        width: 20px;
+    }
+
+    .product > span {
+        font-size: 0.8rem;
+        margin-left: 1rem;
+        text-align: center;
+        width: 60%;
+    }
+
+    body > footer > a > button {
+        width: 80%;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    /* Titulo de cada produto */
+    body > article > main:nth-child(3) > span {
+        text-align: left;
+    }
+
+    /* Quantidade onde está escrito unidade*/
+    body > article > main:nth-child(3) > span > p:nth-child(2),
+    body > article > main:nth-child(4) > span > p:nth-child(2),
+    body > article > main:nth-child(5) > span > p:nth-child(2),
+    body > article > main:nth-child(6) > span > p:nth-child(2),
+    body > article > main:nth-child(7) > span > p:nth-child(2),
+    body > article > main:nth-child(8) > span > p:nth-child(2),
+    body > article > main:nth-child(8) > span > p:nth-child(2),
+    body > article > main:nth-child(10) > span > p:nth-child(2),
+    body > article > main:nth-child(11) > span > p:nth-child(2),
+    body > article > main:nth-child(12) > span > p:nth-child(2),
+    body > article > main:nth-child(13) > span > p:nth-child(2),
+    body > article > main:nth-child(14) > span > p:nth-child(2),
+    body > article > main:nth-child(15) > span > p:nth-child(2) {
+        font-weight: 300;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+
+    /* Quantidade */
+    body > article > main:nth-child(3) > span > p.unidade,
+    body > article > main:nth-child(4) > span > p.unidade,
+    body > article > main:nth-child(5) > span > p.unidade,
+    body > article > main:nth-child(6) > span > p.unidade,
+    body > article > main:nth-child(7) > span > p.unidade,
+    body > article > main:nth-child(8) > span > p.unidade,
+    body > article > main:nth-child(9) > span > p.unidade,
+    body > article > main:nth-child(10) > span > p.unidade,
+    body > article > main:nth-child(11) > span > p.unidade,
+    body > article > main:nth-child(12) > span > p.unidade,
+    body > article > main:nth-child(13) > span > p.unidade,
+    body > article > main:nth-child(14) > span > p.unidade {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 0;
+        font-weight: 700;
+    }
+}
+
+

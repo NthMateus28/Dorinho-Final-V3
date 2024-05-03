@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizzaria Dorinho | Monte</title>
+        <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+
+        <!-- Inclua os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <link rel="stylesheet" href="../style/adicional.css" />
+        <script defer src="../Scrypt/adicional.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="../img/logo.png" alt="Logo" />
+        </header>
+        <article>
+            <div class="title">
+                <span>Gostaria de adicionar alguma borda?</span>
+            </div>
+
+            <div class="pizzaSelecionada">
+                <p class="pizzaUm">Sabor 1:</p>
+            </div>
+
+            <div class="subTitlle">
+                <h4>Bordas Cortesia:</h4>
+            </div>      
+
+            <!-- Produto 1 - Borda Catupiry -->
+            <main class="product" data-index="Borda-Catupiry">
+                <span class="titleProduct"
+                    >Borda Catupiry<br />
+                    R$0,00       
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Borda Cheddar -->
+            <main class="product" data-index="Borda-Cheddar">
+                <span class="titleProduct"
+                    >Borda Cheddar<br />
+                    R$0,00  
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Borda Mista Salgada -->
+            <main class="product" data-index="Borda-Mista-Salgada">
+                <span class="titleProduct"
+                    >Borda Mista Salgada<br />
+                    R$0,00  
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Borda Chocolate Preto -->
+            <main class="product" data-index="Borda-Chocolate-Preto">
+                <span class="titleProduct"
+                    >Borda Chocolate Preto<br />
+                    R$0,00  
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Borda Chocolate Branco -->
+            <main class="product" data-index="Borda-Chocolate-Branco">
+                <span class="titleProduct"
+                    >Borda Chocolate Branco<br />
+                    R$0,00  
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 6 - Borda Mista Doce -->
+            <main class="product" data-index="Borda-Mista-Doce">
+                <span class="titleProduct"
+                    >Borda Mista Doce<br />
+                    R$0,00  
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <div class="subTitlle">
+                <h4>Bordas Supreme 2:</h4>
+            </div>
+
+            <!-- Produto 1 - Borda Creme de Avelã -->
+            <main class="product" data-index="Borda-Creme-de-Avela">
+                <span class="titleProduct"
+                    >Borda Creme de Avelã<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Borda Creme de Limão -->
+            <main class="product" data-index="Borda-Creme-de-Limão">
+                <span class="titleProduct"
+                    >Borda Creme de Limão<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Borda Creme de Morango -->
+            <main class="product" data-index="Borda-Creme-de-Morango">
+                <span class="titleProduct"
+                    >Borda Creme de Morango<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Borda Chocolate Meio Amargo -->
+            <main class="product" data-index="Borda-Chocolate-Meio-Amargo">
+                <span class="titleProduct"
+                    >Borda Chocolate Meio Amargo<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Borda Doce de Leite -->
+            <main class="product" data-index="Borda-Doce-de-Leite">     
+                <span class="titleProduct"
+                    >Borda Doce de Leite<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <div class="subTitlle">
+                <h4>Bordas Supreme 3:</h4>
+            </div>
+
+            <!-- Produto 1 - Borda Catupiry com Bacon -->
+            <main class="product" data-index="Borda-Catupiry-com-Bacon">
+                <span class="titleProduct"
+                    >Borda Catupiry com Bacon<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Borda Cheddar com Bacon -->
+            <main class="product" data-index="Borda-Cheddar-com-Bacon">
+                <span class="titleProduct"
+                    >Borda Cheddar com Bacon<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Borda Catupiry com calabresa ralada -->
+            <main class="product" data-index="Borda-Catupiry-com-calabresa-ralada">
+                <span class="titleProduct"
+                    >Borda Catupiry com calabresa ralada<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Borda Cheddar com calabresa ralada -->
+            <main class="product" data-index="Borda-Cheddar-com-calabresa-ralada">
+                <span class="titleProduct"
+                    >Borda Cheddar com calabresa ralada<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Borda Catupiry com frango -->
+            <main class="product" data-index="Borda-Catupiry-com-frango">     
+                <span class="titleProduct"
+                    >Borda Catupiry com frango<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 6 - Borda Cheddar com Frango -->
+            <main class="product" data-index="Borda-Cheddar-com-Frango">     
+                <span class="titleProduct"
+                    >Borda Cheddar com Frango<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 7 - Borda Catupiry com presunto -->
+            <main class="product" data-index="Borda-Catupiry-com-presunto">     
+                <span class="titleProduct"
+                    >Borda Catupiry com presunto<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 8 - Borda Cheddar com presunto -->
+            <main class="product" data-index="Borda-Cheddar-com-presunto">     
+                <span class="titleProduct"
+                    >Borda Cheddar com presunto<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 9 - Borda Branco com Abacaxi -->
+            <main class="product" data-index="Borda-Branco-com-Abacaxi">     
+                <span class="titleProduct"
+                    >Borda Branco com Abacaxi<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 10 - Borda Preto com Abacaxi -->
+            <main class="product" data-index="Borda-Preto-com-Abacaxi">     
+                <span class="titleProduct"
+                    >Borda Preto com Abacaxi<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 11 - Borda Branco com Amendoim -->
+            <main class="product" data-index="Borda-Branco-com-Amendoim">     
+                <span class="titleProduct"
+                    >Borda Branco com Amendoim<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 12 - Borda Branco com Coco Ralado -->
+            <main class="product" data-index="Borda-Branco-com-Coco-Ralado">     
+                <span class="titleProduct"
+                    >Borda Branco com Coco Ralado<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 13 - Borda Preto com Coco Ralado -->
+            <main class="product" data-index="Borda-Preto-com-Coco-Ralado">     
+                <span class="titleProduct"
+                    >Borda Preto com Coco Ralado<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 14 - Borda Branco com Confete -->
+            <main class="product" data-index="Borda-Branco-com-Confete">     
+                <span class="titleProduct"
+                    >Borda Branco com Confete<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 15 - Borda Preto com Confete -->
+            <main class="product" data-index="Borda-Preto-com-Confete">     
+                <span class="titleProduct"
+                    >Borda Preto com Confete<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 16 - Borda Branco com Morango -->
+            <main class="product" data-index="Borda-Branco-com-Morango">     
+                <span class="titleProduct"
+                    >Borda Branco com Morango<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 17 - Borda Preto com Morango -->
+            <main class="product" data-index="Borda-Preto-com-Morango">     
+                <span class="titleProduct"
+                    >Borda Preto com Morango<br />
+                    R$15,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <div class="botaoFinal">
+                <a href="./confirmar.html">
+                    <button type="button">Continuar Pedido</button>
+                </a>
+            </div>
+        </article>
+        <footer>
+            <span>Valor Final:</span>
+            <span class="valor">
+                <span class="resultadoLabel">R$</span>
+                <p class="resultadoFinal">0.00</p>
+            </span>
+        </footer>
+    </body>
+</html>

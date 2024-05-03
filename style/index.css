@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+header > img:first-child {
+    height: 100px;
+    margin: 0 auto;
+    margin-left: 45%;
+}
+
+header > :nth-child(2) {
+    font-family: "Montserrat", sans-serif;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+header > :nth-child(3) {
+    width: 30px;
+    height: 30px;
+    color: #cc171c;
+}
+
+#mainPrimeiro > div.textProduct > span.textInfo {
+    font-size: 18px;
+}
+
+#mainPrimeiro > div:nth-child(1) > img,
+#mainSegundo > div:nth-child(1) > img,
+#mainTerceiro > div:nth-child(1) > img {
+    width: 100px;
+}
+
+.title {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: #cc171c;
+}
+
+.card-container {
+    text-align: center;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 0 5px #cc171c;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    margin: 32px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.monte-seu-prato {
+    flex: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+#mainPrimeiro > div:nth-child(1) > img,
+#mainSegundo > div:nth-child(1) > img,
+#mainTerceiro > div:nth-child(1) > img {
+    width: 200px;
+}
+
+.monte-seu-prato img {
+    max-width: 500%;
+    max-height: 200%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.textProduct {
+    flex: 6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textProduct > span {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btnButton {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    width: 100%;
+}
+
+.btnButton > a > button {
+    width: 400px; /* Defina um valor fixo */
+    max-width: 100%; /* Ou use um valor em porcentagem que não exceda o layout */
+    height: 50px;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+.btnButton > a > button:hover {
+    background-color: #cc171c;
+    color: #f0f8ff;
+    width: 400px; /* Defina um valor fixo */
+    max-width: 100%;
+}
+
+.enviar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#btnEnviar {
+    text-align: center;
+    width: 50%;
+    margin-top: 15px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#btnEnviar:hover {
+    background-color: #cc171c;
+    color: aliceblue;
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header > img:first-child {
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    header > :nth-child(2) {
+        font-family: "Montserrat", sans-serif;
+        margin-right: 5px;
+        font-weight: 700;
+    }
+
+    header > :nth-child(3) {
+        width: 30px;
+        height: 30px;
+        color: #cc171c;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centraliza verticalmente o conteúdo */
+        align-items: center;
+        box-shadow: 0 0 5px #cc171c;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: white;
+        margin: 32px;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+    }
+
+    #mainPrimeiro > div.textProduct > span {
+        text-align: center;
+    }
+
+    #mainPrimeiro > div.monte-seu-prato > img {
+        width: 40vh;
+        height: 30vh;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    .btnButton {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #mainPrimeiro > div.textProduct > div > a {
+        margin: 0;
+        padding: 0;
+    }
+
+    .btnButton > a > button {
+        width: 250px; /* Defina um valor fixo */
+        max-width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+        background-color: #f0f8ff;
+        color: #000;
+    }
+
+    .btnButton > a > button:hover {
+        background-color: #cc171c;
+        color: #f0f8ff;
+        width: 250px; /* Defina um valor fixo */
+        max-width: 100%;
+    }
+}

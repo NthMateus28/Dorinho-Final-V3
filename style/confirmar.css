@@ -1,0 +1,414 @@
+@import url(./index.css);
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+form {
+    margin: 60px;
+}
+
+.product {
+    display: flex;
+    width: 100%;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    padding: 10px; /* Adicione um espaçamento interno para melhor visualização */
+}
+
+.product > img {
+    margin-right: 10px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+.product > span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title-confirm {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: #cc171c;
+}
+
+/* Estilos base */
+/* .titles {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-left: 2rem;
+    font-size: 1.25rem;
+}
+
+.titles > span {
+    flex: 1;
+    text-align: center;
+}
+
+.product > span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.formulario {
+    max-width: 100%;
+    width: 60%;
+    margin: 0 auto;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+td {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para centralizar o conteúdo das células */
+.nameProdutc,
+.valor {
+    text-align: center;
+}
+
+.quantidade {
+    text-align: center;
+}
+
+.forms {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    width: 100%;
+    display: block;
+    /* margin-right: 15px; */
+    margin-top: 40px;
+}
+
+body > article > form > table.soma > tbody {
+    background-color: #fff;
+}
+
+.soma {
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body > article > form > table.somaTotal > tbody > tr > td:nth-child(1),
+body > article > form > table.somaTotal > tbody > tr > td:nth-child(2),
+body > article > form > table.somaTotal > tbody > tr > td:nth-child(3) {
+    border-top: solid 1px #3333332a;
+    background-color: #f1f3f9;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.childSoma {
+    border: none;
+    text-align: start;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+body > article > form > table.soma > tbody > tr > td:nth-child(3) {
+    text-align: right;
+}
+
+/* Label Nome */
+body > article > form > div > label:nth-child(1) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* font-size: 1.25rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+/* Label Telefone */
+body > article > form > div > label:nth-child(3) {
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* font-size: 1.25rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.input, #troco {
+    /* margin-top: 10px; */
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    background-color: #e6ecf8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 15px 15px;
+
+    font-weight: 600;
+    color: #333;
+}
+
+.forms span {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #575757;
+    margin: 20px;
+    cursor: text;
+}
+
+input:focus {
+    background-color: #f1f3f9;
+    border: 2px solid #333;
+}
+
+/* Retirar no Balcão */
+body > article > form > div > label:nth-child(5) {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+/* Entrega */
+body > article > form > div > label:nth-child(7) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/* Label Do Bairro */
+body > article > form > div > label:nth-child(8) {
+    margin-top: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* font-size: 1.25rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+body > article > form > div > label:nth-child(11) {
+    margin-top: 50px;
+}
+
+#bairros {
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    padding: 20px 25px; /* Aumente o padding para acomodar a seta */
+    border: none;
+    background-color: #e6ecf8;
+    -webkit-appearance: none; /* Remove o estilo padrão do elemento em navegadores Webkit */
+    -moz-appearance: none; /* Remove o estilo padrão do elemento em navegadores Firefox */
+    appearance: none; /* Remove o estilo padrão do elemento em navegadores modernos */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"><path d="M7 10l5 5 5-5z"/></svg>'); /* Adiciona uma imagem personalizada para a seta */
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%; /* Ajusta a posição da imagem (seta) */
+}
+
+body > article > form > div > label:nth-child(13),
+body > article > form > div > label:nth-child(15) {
+    margin-top: 10px;
+}
+
+/* Label Endereço */
+body > article > form > div > label:nth-child(10),
+#bairros > option:nth-child(1) {
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* font-size: 1.25rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+#endereco {
+    /* margin-top: 10px; */
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    background-color: #e6ecf8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 15px 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Label Forma de Pagamento */
+body > article > form > div > label:nth-child(12) {
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    /* font-size: 1.25rem; */
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+#formaPagamento {
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    padding: 20px 25px; /* Aumente o padding para acomodar a seta */
+    border: none;
+    background-color: #e6ecf8;
+    -webkit-appearance: none; /* Remove o estilo padrão do elemento em navegadores Webkit */
+    -moz-appearance: none; /* Remove o estilo padrão do elemento em navegadores Firefox */
+    appearance: none; /* Remove o estilo padrão do elemento em navegadores modernos */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"><path d="M7 10l5 5 5-5z"/></svg>'); /* Adiciona uma imagem personalizada para a seta */
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%; /* Ajusta a posição da imagem (seta) */
+}
+
+.final {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+body > article > div.final > a > button {
+    font-size: 15px;
+    /* margin-top: 50px; */
+    width: 80%;
+
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    margin-bottom: 100px;
+}
+
+body > article > div.final > a > button:hover {
+    background-color: #cc171c;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        display: flex;
+        width: 100%;
+        background-color: aliceblue;
+        align-items: center;
+        justify-content: flex-start;
+        border: 1px solid #ccc;
+        padding: 10px; /* Adicione um espaçamento interno para melhor visualização */
+    }
+
+    .product > img {
+        /* margin-right: 20px; */
+    }
+
+    .product > span {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .title-confirm {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: none;
+        color: #cc171c;
+    }
+
+    .product > img {
+        border-radius: 5px;
+        border: 1px solid #000;
+        width: 30%;
+        padding: 0.25rem;
+    }
+
+    .product > span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        /* margin-left: 2rem; */
+        text-decoration: none;
+    }
+
+    .titles {
+        font-size: 0.75rem; /* Altere o tamanho da fonte conforme necessário */
+        margin: 0;
+    }
+
+    #produtos-selecionados {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .product > span {
+        font-size: 1rem;
+    }
+
+    #produtos-selecionados > div > span.nameProdutc,
+    #produtos-selecionados > div > span.valor,
+    #produtos-selecionados > div > span.quantidade {
+        margin: 0;
+    }
+
+    .childSoma {
+        border: none;
+        text-align: start;
+        font-size: 0.75rem;
+        font-family: "Montserrat", sans-serif;
+        background-color: #fff;
+        font-weight: 700;
+    }
+}
+
+#divTroco{
+    margin-top: 1rem;
+}
