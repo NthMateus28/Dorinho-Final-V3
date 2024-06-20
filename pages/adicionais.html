@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizzaria Dorinho | Monte</title>
+        <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+
+        <!-- Inclua os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <link rel="stylesheet" href="../style/adicional.css" />
+        <script defer src="../Scrypt/adicional.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="../img/logo.png" alt="Logo" />
+        </header>
+        <article>
+            <div class="title">
+                <span>Gostaria de adicionar alguma borda?</span>
+            </div>
+
+            <div class="pizzaSelecionada">
+                <p class="pizzaUm">Sabor 1:</p>
+            </div>
+
+            <div class="subTitlle">
+                <h4>Bordas Supreme 1:</h4>
+            </div>
+
+            <!-- Produto 1 - Borda Catupiry -->
+            <main class="product" data-index="Borda-Catupiry">
+                <span class="titleProduct"
+                    >Borda Catupiry<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Borda Cheddar -->
+            <main class="product" data-index="Borda-Cheddar">
+                <span class="titleProduct"
+                    >Borda Cheddar<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Borda Mista Salgada -->
+            <main class="product" data-index="Borda-Mista-Salgada">
+                <span class="titleProduct"
+                    >Borda Mista Salgada<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Borda Chocolate Preto -->
+            <main class="product" data-index="Borda-Chocolate-Preto">
+                <span class="titleProduct"
+                    >Borda Chocolate Preto<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Borda Chocolate Branco -->
+            <main class="product" data-index="Borda-Chocolate-Branco">
+                <span class="titleProduct"
+                    >Borda Chocolate Branco<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 6 - Borda Mista Doce -->
+            <main class="product" data-index="Borda-Mista-Doce">
+                <span class="titleProduct"
+                    >Borda Mista Doce<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+            </main>
+
+            <div class="botaoFinal">
+                <a href="./confirmar.html">
+                    <button type="button">Continuar Pedido</button>
+                </a>
+            </div>
+        </article>
+        <footer>
+            <span>Valor Final:</span>
+            <span class="valor">
+                <span class="resultadoLabel">R$</span>
+                <p class="resultadoFinal">0.00</p>
+            </span>
+        </footer>
+    </body>
+</html>

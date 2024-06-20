@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizzaria Dorinho | Monte</title>
+        <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+
+        <!-- Inclua os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <link rel="stylesheet" href="../style/adicionalGeral.css" />
+        <script defer src="../Scrypt/adicionalCombo.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="../img/logo.png" alt="Logo" />
+        </header>
+        <article>
+            <div class="title">
+                <span>Gostaria de adicionar alguma borda?</span>
+            </div>
+
+            <div class="pizzaSelecionada">
+                <p class="pizzaUm"></p>
+            </div>
+
+            <div class="subTitlle">
+                <h4>Bordas Supreme 1:</h4>
+            </div>
+
+            <!-- Produto 1 - Borda Catupiry -->
+            <main class="product" data-index="Borda-Catupiry">
+                <span class="titleProduct"
+                    >Borda Catupiry<br />
+                    R$0,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Borda Cheddar -->
+            <main class="product" data-index="Borda-Cheddar">
+                <span class="titleProduct"
+                    >Borda Cheddar<br />
+                    R$0,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Borda Mista Salgada -->
+            <main class="product" data-index="Borda-Mista-Salgada">
+                <span class="titleProduct"
+                    >Borda Mista Salgada<br />
+                    R$0,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <div class="subTitlle">
+                <h4>Molhos:</h4>
+            </div>
+
+            <!-- Produto 1 - Ketcuhp -->
+            <main class="product" data-index="Ketcuhp">
+                <span class="titleProduct"
+                    >Ketcuhp<br />
+                    R$3,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Mostarda -->
+            <main class="product" data-index="Mostarda">
+                <span class="titleProduct"
+                    >Mostarda<br />
+                    (100ml)<br />
+                    R$3,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Barbecue -->
+            <main class="product" data-index="Barbecue">
+                <span class="titleProduct"
+                    >Barbecue<br />
+                    (100ml)<br />
+                    R$3,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Maionese Caseira -->
+            <main class="product" data-index="Maionese-Caseira">
+                <span class="titleProduct"
+                    >Maionese Caseira<br />
+                    (100ml)<br />
+                    R$3,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Todos os molhos -->
+            <main class="product" data-index="Todos-os-molhos">
+                <span class="titleProduct"
+                    >Todos os molhos<br />
+                    (100ml cada)<br />
+                    R$10,00
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <div class="forms">
+                <!-- Outros campos do formulário -->
+                <label for="obs">Observações do Pedido:</label>
+                <textarea
+                    id="obs"
+                    name="Observacoes"
+                    placeholder="Ex.: Tirar cebola"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+            </div>
+
+            <div class="botaoFinal">
+                <a href="./confirmar.html">
+                    <button type="button">Continuar Pedido</button>
+                </a>
+            </div>
+        </article>
+        <footer>
+            <span>Valor Final:</span>
+            <span class="valor">
+                <span class="resultadoLabel">R$</span>
+                <p class="resultadoFinal">0.00</p>
+            </span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizzaria Dorinho | Monte</title>
+        <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon" />
+
+        <!-- Inclua os scripts do Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <link rel="stylesheet" href="../../style/calzoneDoisSabores.css" />
+        <script defer src="../../Scrypt/calzoneDoisSabor.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="../../img/logo.png" alt="Logo" />
+        </header>
+        <article>
+            <div class="banner">
+                <img src="../../img/bannerCalzone.png" alt="banner de comida" />
+            </div>
+            <div class="title">
+                <span>Selecione um sabor para o seu calzone:</span>
+            </div>
+
+            <div class="subTitlle">
+                <h4>Escolha o primeiro sabor:</h4>
+            </div>
+
+            <!-- Produto 1 - Bacon -->
+            <main class="product" data-index="Sabor 1 do Calzone: Bacon">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Costela"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Bacon <br />
+                    (bacon, cebola e ovo)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 2 - Bacon II -->
+            <main class="product" data-index="Sabor 1 do Calzone: Bacon II">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Bacon II"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Bacon II <br />(bacon)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 3 - Bacon com Catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Bacon com Catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Bacon com Catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Bacon com Catupiry <br />(bacon e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 4 - Bacon com cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Bacon com cheddar">
+                <img src="../../img/Calzone.png" alt="Bacon com cheddar" class="imgCarne" />
+                <span class="titleProduct"
+                    >Bacon com cheddar <br />(atum e cebola)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 5 - Bacon Dourado -->
+            <main class="product" data-index="Sabor 1 do Calzone: Bacon Dourado">
+                <img src="../../img/Calzone.png" alt="Bacon Dourado" class="imgCarne" />
+                <span class="titleProduct"
+                    >Bacon Dourado<br />(bacon e milho)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 6 - Baiana -->
+            <main class="product" data-index="Sabor 1 do Calzone: Baiana">
+                <img src="../../img/Calzone.png" alt="Baiana" class="imgCarne" />
+                <span class="titleProduct"
+                    >Baiana <br />(calabresa ralada e pimenta)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 7 - Brócolis -->
+            <main class="product" data-index="Sabor 1 do Calzone: Brócolis">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Brócolis"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Brócolis <br />(brócolis e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 8 - Broócolis com Cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Broócolis com Cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Broócolis com Cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Broócolis com Cheddar <br />(brócolis e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 9 - Calabresa -->
+            <main class="product" data-index="Sabor 1 do Calzone: Calabresa">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Calabresa"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Calabresa <br />(calabresa ralada)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 10 - Calabresa com catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Calabresa com catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Calabresa com catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Calabresa com catupiry <br />(calabresa ralada e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 11 - Calabresa com cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Calabresa com cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Calabresa com cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Calabresa com cheddar <br />(calabresa ralada e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 12 - Coração -->
+            <main class="product" data-index="Sabor 1 do Calzone: Coração">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Coração"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Coração <br />(Coração)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 13 - Coração com catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Coração com catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Coração com catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Coração com catupiry <br />(Coração e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 14 - Coração com cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Coração com cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Coração com cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Coração com cheddar <br />(Coração e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 15 - Entreveiro -->
+            <main class="product" data-index="Sabor 1 do Calzone: Entreveiro">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Entreveiro"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Entreveiro <br />(filé, frango, bacon, e calabresa ralada)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 16 - Filé -->
+            <main class="product" data-index="Sabor 1 do Calzone: Filé">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Filé"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Filé <br />(filé)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 17 - Filé Acebolado -->
+            <main class="product" data-index="Sabor 1 do Calzone: Filé Acebolado">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Filé Acebolado"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Filé Acebolado <br />(filé acebolado)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 18 - Filé com Catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Filé com Catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Filé com Catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Filé com Catupiry <br />(filé e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 19 - Filé com Cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Filé com Cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Filé com Cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Filé com Cheddar <br />(filé e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 20 - Frango -->
+            <main class="product" data-index="Sabor 1 do Calzone: Frango">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Frango"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Frango <br />(frango)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 21 - Frango acebolado -->
+            <main class="product" data-index="Sabor 1 do Calzone: Frango acebolado">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Frango acebolado"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Frango acebolado <br />(Frango acebolado)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 22 - Frango com Catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Frango com Catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Frango com Catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Frango com Catupiry <br />(Frango e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 23 - Frango com Cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Frango com Cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Frango com Cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Frango com Cheddar <br />(Frango e Cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 24 - Milho -->
+            <main class="product" data-index="Sabor 1 do Calzone: Milho">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Milho"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Milho <br />(Milho e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 25 - Milho com cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Milho com cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Milho com cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Milho com cheddar <br />(Milho e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 26 - Presunto com catupiry -->
+            <main class="product" data-index="Sabor 1 do Calzone: Presunto com catupiry">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Presunto com catupiry"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Presunto com catupiry <br />(presunto e catupiry)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 27 - Presunto com cheddar -->
+            <main class="product" data-index="Sabor 1 do Calzone: Presunto com cheddar">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Presunto com cheddar"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Presunto com cheddar <br />(Filé e cheddar)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 28 - Strogonoff de carne -->
+            <main class="product" data-index="Sabor 1 do Calzone: Strogonoff de carne">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Strogonoff de carne"
+                    class="imgCarne"
+                />
+                <span class="titleProduct"
+                    >Strogonoff de carne <br />(strogonoff de carne)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 29 - Strogonoff de Frango -->
+            <main class="product" data-index="Sabor 1 do Calzone: Strogonoff de Frango">
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Strogonoff de Frango"
+                    class="imgFrango"
+                />
+                <span class="titleProduct"
+                    >Strogonoff de Frango <br />(strogonoff de Frango)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <!-- Produto 30 - Vegetariana -->
+            <main class="product" data-index="Sabor 1 do Calzone: Vegetariana"> 
+                <img
+                    src="../../img/Calzone.png"
+                    alt="Vegetariana"
+                    class="imgFrango"
+                />
+                <span class="titleProduct"
+                    >Vegetariana <br />(brócolis, palmito, tomate, milho e cebola)
+                    <p class="textUnidade">unidade</p>
+                    <p class="unidade">0</p></span
+                >
+                <div class="button-container">
+                    <img
+                        src="../../img/adicionar.png"
+                        alt="adicionar"
+                        class="btnAdicionar"
+                    />
+                    <img
+                        src="../../img/retirar.png"
+                        alt="retirar"
+                        class="btnRetirar"
+                    />
+                </div>
+            </main>
+
+            <hr style="margin: 30px" />
+
+            <div class="subTitlle">
+                <h4>Escolha o segundo sabor:</h4>
+            </div>
+
+
+                        <!-- Produto 1 - Bacon -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Bacon - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Costela"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Bacon <br />
+                                (bacon, cebola e ovo)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 2 - Bacon II -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Bacon II - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Bacon II"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Bacon II <br />(bacon)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 3 - Bacon com Catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Bacon com Catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Bacon com Catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Bacon com Catupiry <br />(bacon e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 4 - Bacon com cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Bacon com cheddar - 1">
+                            <img src="../../img/Calzone.png" alt="Bacon com cheddar" class="imgCarne" />
+                            <span class="titleProduct"
+                                >Bacon com cheddar <br />(atum e cebola)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 5 - Bacon Dourado -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Bacon Dourado - 1">
+                            <img src="../../img/Calzone.png" alt="Bacon Dourado" class="imgCarne" />
+                            <span class="titleProduct"
+                                >Bacon Dourado<br />(bacon e milho)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 6 - Baiana -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Baiana - 1">
+                            <img src="../../img/Calzone.png" alt="Baiana" class="imgCarne" />
+                            <span class="titleProduct"
+                                >Baiana <br />(calabresa ralada e pimenta)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 7 - Brócolis -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Brócolis - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Brócolis"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Brócolis <br />(brócolis e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 8 - Broócolis com Cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Broócolis com Cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Broócolis com Cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Broócolis com Cheddar <br />(brócolis e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 9 - Calabresa -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Calabresa - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Calabresa"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Calabresa <br />(calabresa ralada)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 10 - Calabresa com catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Calabresa com catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Calabresa com catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Calabresa com catupiry <br />(calabresa ralada e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 11 - Calabresa com cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Calabresa com cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Calabresa com cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Calabresa com cheddar <br />(calabresa ralada e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 12 - Coração -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Coração - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Coração"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Coração <br />(Coração)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 13 - Coração com catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Coração com catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Coração com catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Coração com catupiry <br />(Coração e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 14 - Coração com cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Coração com cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Coração com cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Coração com cheddar <br />(Coração e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 15 - Entreveiro -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Entreveiro - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Entreveiro"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Entreveiro <br />(filé, frango, bacon, e calabresa ralada)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 16 - Filé -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Filé - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Filé"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Filé <br />(filé)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 17 - Filé Acebolado -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Filé Acebolado - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Filé Acebolado"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Filé Acebolado <br />(filé acebolado)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 18 - Filé com Catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Filé com Catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Filé com Catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Filé com Catupiry <br />(filé e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 19 - Filé com Cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Filé com Cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Filé com Cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Filé com Cheddar <br />(filé e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 20 - Frango -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Frango - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Frango"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Frango <br />(frango)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 21 - Frango acebolado -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Frango acebolado - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Frango acebolado"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Frango acebolado <br />(Frango acebolado)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 22 - Frango com Catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Frango com Catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Frango com Catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Frango com Catupiry <br />(Frango e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 23 - Frango com Cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Frango com Cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Frango com Cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Frango com Cheddar <br />(Frango e Cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 24 - Milho -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Milho - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Milho"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Milho <br />(Milho e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 25 - Milho com cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Milho com cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Milho com cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Milho com cheddar <br />(Milho e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 26 - Presunto com catupiry -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Presunto com catupiry - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Presunto com catupiry"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Presunto com catupiry <br />(presunto e catupiry)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 27 - Presunto com cheddar -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Presunto com cheddar - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Presunto com cheddar"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Presunto com cheddar <br />(Filé e cheddar)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 28 - Strogonoff de carne -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Strogonoff de carne - 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Strogonoff de carne"
+                                class="imgCarne"
+                            />
+                            <span class="titleProduct"
+                                >Strogonoff de carne <br />(strogonoff de carne)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 29 - Strogonoff de Frango -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Strogonoff de Frango- 1">
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Strogonoff de Frango"
+                                class="imgFrango"
+                            />
+                            <span class="titleProduct"
+                                >Strogonoff de Frango <br />(strogonoff de Frango)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+            
+                        <!-- Produto 30 - Vegetariana -->
+                        <main class="product" data-index="Sabor 2 do Calzone: Vegetariana - 1"> 
+                            <img
+                                src="../../img/Calzone.png"
+                                alt="Vegetariana"
+                                class="imgFrango"
+                            />
+                            <span class="titleProduct"
+                                >Vegetariana <br />(brócolis, palmito, tomate, milho e cebola)
+                                <p class="textUnidade">unidade</p>
+                                <p class="unidade">0</p></span
+                            >
+                            <div class="button-container">
+                                <img
+                                    src="../../img/adicionar.png"
+                                    alt="adicionar"
+                                    class="btnAdicionar"
+                                />
+                                <img
+                                    src="../../img/retirar.png"
+                                    alt="retirar"
+                                    class="btnRetirar"
+                                />
+                            </div>
+                        </main>
+
+            <!-- Mais produtos podem ser adicionados seguindo a mesma estrutura -->
+
+            <div class="botaoFinal">
+                <a href="../confirmar.html">
+                    <button type="button">Continuar Pedido</button>
+                </a>
+            </div>
+        </article>
+        <footer>
+            <span>Valor Final:</span>
+            <span class="valor">
+                <span class="resultadoLabel">R$</span>
+                <p class="resultadoFinal">0.00</p>
+            </span>
+        </footer>
+    </body>
+</html>
